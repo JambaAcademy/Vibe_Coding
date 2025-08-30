@@ -1,0 +1,231 @@
+/* Modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dashboard {
+  background: rgba(255,255,255,0.25);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 2.5rem 2rem;
+  margin: 2rem;
+  max-width: 520px;
+  width: 100%;
+  transition: box-shadow 0.3s;
+}
+
+.dashboard:hover {
+  box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.37);
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(102,166,255,0.15);
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 8px rgba(102,166,255,0.08);
+  outline: none;
+  transition: background 0.2s;
+}
+
+.search-form input:focus {
+  background: rgba(255,255,255,0.95);
+}
+
+.search-form button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #66a6ff 0%, #89f7fe 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(102,166,255,0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.search-form button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #0077b6 0%, #66a6ff 100%);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.search-form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.card {
+  background: rgba(255,255,255,0.55);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(102,166,255,0.10);
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s;
+}
+
+.current-weather .weather-main {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 2px 8px #66a6ff55);
+  transition: transform 0.2s;
+}
+
+.weather-icon:hover {
+  transform: scale(1.1) rotate(-8deg);
+}
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0077b6;
+  text-shadow: 0 2px 8px #66a6ff33;
+}
+
+.weather-details {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1.1rem;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.city {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.forecast.card {
+  padding-top: 1rem;
+}
+
+.forecast-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.forecast-item {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f7f9fa 100%);
+  border-radius: 12px;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  flex: 1 1 90px;
+  min-width: 90px;
+  box-shadow: 0 2px 8px rgba(102,166,255,0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-item:hover {
+  transform: scale(1.07) translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102,166,255,0.18);
+}
+
+.forecast-item .date {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.forecast-item .temp {
+  font-size: 1.3rem;
+  color: #0077b6;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.forecast-item .desc {
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.error {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+  background: rgba(255, 235, 238, 0.7);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.loading {
+  color: #0077b6;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+  background: rgba(230, 245, 255, 0.7);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    padding: 1rem;
+    margin: 0.5rem;
+    max-width: 100%;
+  }
+  .forecast-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .forecast-item {
+    min-width: 100%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}

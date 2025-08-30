@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link href="/tailwind.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div id="app" class="w-full max-w-md p-4 bg-white rounded shadow">
+      <!-- Login/Register Form -->
+      <div id="auth" class="mb-4"></div>
+      <!-- Chat Messages -->
+      <div id="messages" class="h-64 overflow-y-auto mb-4 border rounded p-2 bg-gray-50"></div>
+      <!-- Message Input -->
+      <form id="chat-form" class="flex">
+        <input id="message-input" type="text" class="flex-1 border rounded-l px-2 py-1" placeholder="Type a message..." />
+        <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded-r">Send</button>
+      </form>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

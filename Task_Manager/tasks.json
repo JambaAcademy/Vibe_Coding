@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1756479299187",
+    "text": "Get Grocery",
+    "completed": true
+  },
+  {
+    "id": "1756479383253",
+    "text": "Pay Electricity",
+    "completed": true
+  },
+  {
+    "id": "1756479388846",
+    "text": "Recharge Phone",
+    "completed": false
+  },
+  {
+    "id": "1756479405876",
+    "text": "Complete first Chapter",
+    "completed": false
+  },
+  {
+    "id": "1756479414803",
+    "text": "Apply for jobs",
+    "completed": false
+  }
+]

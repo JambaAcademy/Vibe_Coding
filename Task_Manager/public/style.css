@@ -1,0 +1,165 @@
+/* Softer Sci-fi Theme + Responsive Design */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body {
+    font-family: 'Orbitron', Arial, sans-serif;
+    background: radial-gradient(ellipse at top left, #23395d 0%, #1e2a38 100%);
+    color: #e0f7fa;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: rgba(30, 40, 60, 0.97);
+    padding: 32px 24px 24px 24px;
+    border-radius: 18px;
+    box-shadow: 0 0 32px 8px #7fd8ff, 0 2px 8px rgba(0,0,0,0.2);
+    border: 2px solid #7fd8ff;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: #7fd8ff;
+    text-shadow: 0 0 10px #7fd8ff, 0 0 2px #fff;
+    margin-bottom: 24px;
+}
+
+#task-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #23395d;
+    color: #7fd8ff;
+    font-size: 1em;
+    outline: none;
+    box-shadow: 0 0 8px #7fd8ff inset;
+    transition: box-shadow 0.2s;
+}
+
+#task-input:focus {
+    box-shadow: 0 0 16px #7fd8ff inset;
+}
+
+button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #7fd8ff 0%, #4fc3f7 100%);
+    color: #23395d;
+    font-weight: bold;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 8px #7fd8ff;
+    transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #4fc3f7 0%, #7fd8ff 100%);
+    color: #fff;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #7fd8ff33;
+    position: relative;
+}
+
+.task-text {
+    font-size: 1.08em;
+    letter-spacing: 1px;
+    color: #e0f7fa;
+    transition: color 0.2s;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #4fc3f7;
+    text-shadow: 0 0 8px #4fc3f7;
+    opacity: 0.7;
+}
+
+.task-actions button {
+    margin-left: 8px;
+    background: linear-gradient(90deg, #23395d 0%, #7fd8ff 100%);
+    color: #7fd8ff;
+    border: 1px solid #7fd8ff;
+    box-shadow: 0 0 6px #7fd8ff;
+    font-size: 0.95em;
+    padding: 7px 12px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.task-actions button:hover {
+    background: linear-gradient(90deg, #7fd8ff 0%, #23395d 100%);
+    color: #fff;
+    border-color: #4fc3f7;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        max-width: 90vw;
+        padding: 24px 12px 16px 12px;
+    }
+    h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        margin: 16px auto;
+        padding: 16px 6px 10px 6px;
+        border-radius: 10px;
+    }
+    #task-form {
+        flex-direction: column;
+        gap: 6px;
+    }
+    button, #task-input {
+        font-size: 1em;
+        padding: 10px 10px;
+    }
+    .task-actions button {
+        margin-left: 4px;
+        padding: 6px 8px;
+        font-size: 0.9em;
+    }
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 12px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #23395d;
+}
+::-webkit-scrollbar-thumb {
+    background: #7fd8ff;
+    border-radius: 8px;
+}
